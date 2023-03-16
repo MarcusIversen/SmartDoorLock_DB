@@ -11,7 +11,7 @@ __pycache__/
 *.so
 
 # Credentials
-*secrets.py
+secrets.py
 
 # Distribution / packaging
 .Python
