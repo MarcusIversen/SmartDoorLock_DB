@@ -1,14 +1,15 @@
 import paho.mqtt.client as mqtt
 import sqlite3
 from time import time
+from secrets import secrets
 
-MQTT_HOST = 'mqtt.flespi.io'
-MQTT_PORT = 1883
-MQTT_CLIENT_ID = 'ESP82666Client'
-MQTT_USER = 'ZZWrjyszfZfHRP5lezrsuE92wFjmVPxKEj0MHi9M5eiKRdWWAbcTF9LZCSaovxYZ'
-MQTT_PASSWORD = 'ZZWrjyszfZfHRP5lezrsuE92wFjmVPxKEj0MHi9M5eiKRdWWAbcTF9LZCSaovxYZ'
-TOPIC_SENSOR = 'esp32/doorsensor'
-TOPIC_LOCK = 'esp32/doorlock'
+MQTT_HOST = secrets.get("MQTT_HOST")
+MQTT_PORT = secrets.get("MQTT_PORT")
+MQTT_CLIENT_ID = secrets.get("MQTT_CLIENT_ID")
+MQTT_USER = secrets.get("MQTT_USER")
+MQTT_PASSWORD = secrets.get("MQTT_PASSWORD")
+TOPIC_SENSOR = secrets.get("TOPIC_SENSOR")
+TOPIC_LOCK = secrets.get("TOPIC_LOCK")
 
 DATABASE_FILE = 'SmartDoorLock.db'
 
